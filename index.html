@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Panificio Pasticceria Cane a Cortemilia. Scopri la selezione di panettoni, grissini e torte e trova il nostro indirizzo.">
+  <meta name="theme-color" content="#f7f2e9">
+  <title>Panificio Pasticceria Cane · Cortemilia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="catalogo.js" defer></script>
+  <script src="sito.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#contenuto">Vai al contenuto</a>
+  <header class="header" id="inizio">
+    <div class="wrap masthead">
+      <a class="brand" href="#inizio"><img src="assets/logo.webp" width="100" height="74" alt="Panificio Pasticceria Cane"></a>
+      <nav aria-label="Navigazione principale">
+        <a href="#panettoni">Panettoni</a>
+        <a href="#grissini">Grissini</a>
+        <a href="#torte">Torte</a>
+      </nav>
+      <a class="visit" href="#contatti">Vieni a trovarci <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="contenuto">
+    <section class="hero" aria-labelledby="titolo">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> Panificio Pasticceria Cane</p>
+          <h1 id="titolo">Il gusto di<br><em>Cortemilia.</em></h1>
+          <p class="hero-description">Panettoni, grissini e torte da portare in tavola e condividere.</p>
+          <a class="button" href="#panettoni">Scopri i panettoni <span aria-hidden="true">↓</span></a>
+        </div>
+        <figure class="hero-media">
+          <img src="assets/pera-cioccolato-editoriale.webp" width="1200" height="1600" fetchpriority="high" alt="Confezione Cane del panettone pera e cioccolato in una composizione fotografica su fondo verde petrolio">
+          <figcaption><span>Panettone</span> Pera e cioccolato</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="wrap collection" id="panettoni" aria-labelledby="titolo-panettoni">
+      <div class="section-head">
+        <h2 id="titolo-panettoni">I nostri panettoni</h2>
+        <p>Scopri i gusti della collezione e sfoglia le foto.</p>
+      </div>
+      <div id="prodotti-panettoni" class="product-grid"></div>
+    </section>
+
+    <div class="more">
+      <div class="wrap more-grid">
+        <section id="grissini" aria-labelledby="titolo-grissini">
+          <h2 id="titolo-grissini">Grissini</h2>
+          <div id="prodotti-grissini" class="category-products"></div>
+        </section>
+        <section id="torte" aria-labelledby="titolo-torte">
+          <h2 id="titolo-torte">Torte</h2>
+          <div id="prodotti-torte" class="category-products"></div>
+        </section>
+      </div>
+    </div>
+
+    <section id="contatti" class="contacts" aria-labelledby="titolo-contatti">
+      <div class="wrap contacts-grid">
+        <div class="contacts-copy">
+          <p class="eyebrow"><span></span> Cortemilia, CN</p>
+          <h2 id="titolo-contatti">Vieni a trovarci</h2>
+          <address>Corso Luigi Einaudi, 21<br>12074 Cortemilia (CN)</address>
+          <a class="directions" href="https://www.google.com/maps/dir/?api=1&amp;destination=Corso%20Luigi%20Einaudi%2C%2021%2C%2012074%20Cortemilia%20%28CN%29" target="_blank" rel="noopener">Ottieni indicazioni <span aria-hidden="true">↗</span></a>
+          <div class="info"><h3>Informazioni</h3><p id="contatto-email">Indirizzo email in arrivo.</p></div>
+        </div>
+        <iframe title="Mappa del Panificio Pasticceria Cane a Cortemilia" loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" src="https://maps.google.com/maps?q=Corso%20Luigi%20Einaudi%2021%2C%2012074%20Cortemilia%20CN&amp;z=16&amp;output=embed"></iframe>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="wrap"><span>Panificio Pasticceria Cane</span><a href="#inizio">Torna su <span aria-hidden="true">↑</span></a></div>
+  </footer>
+
+  <dialog class="detail" id="scheda" aria-labelledby="titolo-scheda">
+    <div class="detail-inner">
+      <form method="dialog"><button class="close" aria-label="Chiudi scheda" autofocus>×</button></form>
+      <div class="detail-photo" id="foto-scheda"></div>
+      <div class="detail-copy">
+        <h2 id="titolo-scheda"></h2>
+        <p id="descrizione-scheda"></p>
+        <div class="gallery-nav" id="comandi-foto">
+          <button type="button" id="foto-precedente" aria-label="Foto precedente">←</button>
+          <span id="contatore-foto" aria-live="polite"></span>
+          <button type="button" id="foto-successiva" aria-label="Foto successiva">→</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+  <noscript><p class="wrap">Attiva JavaScript per consultare le schede dei prodotti.</p></noscript>
+</body>
+</html>
